@@ -36,13 +36,10 @@ class Education (models.Model):
     def __str__ (self):
         return self.instutation
 
-class Skills_tools (models.Model):
-    title = models.CharField(max_length = 100, blank = True)
-    Class = models.CharField(max_length = 100, blank = True)
 
-    def __str__ (self):
-        return self.title
-
+class Tools (models.Model):
+    titile = models.CharField(max_length = 10)
+    thumbnail = models.ImageField(upload_to = 'images')
 class Skills (models.Model):
     memo = models.TextField(max_length = 500)
 

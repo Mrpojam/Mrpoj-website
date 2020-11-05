@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Settings, Experince, Education, Skills, Skills_tools, Awards
+from .models import Settings, Experince, Education, Skills, Tools, Awards
 
 admin.site.register(Settings)
 
@@ -7,7 +7,7 @@ admin.site.register(Experince)
 
 admin.site.register(Education)
 
-admin.site.register(Skills_tools)
+admin.site.register(Tools)
 
 admin.site.register(Skills)
 
