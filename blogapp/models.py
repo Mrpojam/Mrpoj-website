@@ -15,11 +15,17 @@ class Settings (models.Model):
     linkedin = models.URLField(blank = True)
     interests = models.TextField(max_length = 5000, blank = True)
 
+    def __str__ (self):
+        return self.name
+
 class Experince (models.Model):
     title = models.CharField(max_length = 100)
     job = models.CharField(max_length = 100)
     memo = models.TextField(max_length = 4000)
     date = models.DateField()
+
+    def __str__ (self):
+        return self.title
 
 class Education (models.Model):
     instutation = models.CharField(max_length = 100)
@@ -27,11 +33,24 @@ class Education (models.Model):
     memo = models.TextField(max_length = 4000)
     link = models.URLField(blank = True)
 
+    def __str__ (self):
+        return self.instutation
+
 class Skills_tools (models.Model):
+    title = models.CharField(max_length = 100, blank = True)
     Class = models.CharField(max_length = 100, blank = True)
+
+    def __str__ (self):
+        return self.title
 
 class Skills (models.Model):
     memo = models.TextField(max_length = 500)
 
+    def __str__ (self):
+        return self.memo
+
 class Awards (models.Model):
     memo = models.TextField(max_length = 500)
+
+    def __str__ (self):
+        return self.memo
