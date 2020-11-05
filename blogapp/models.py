@@ -11,7 +11,7 @@ class Settings (models.Model):
     instagram = models.URLField(blank = True)
     telegram = models.URLField(blank = True)
     spotify = models.URLField(blank = True)
-    guthub = models.URLField(blank = True)
+    github = models.CharField(max_length = 200, blank = True)
     linkedin = models.URLField(blank = True)
     interests = models.TextField(max_length = 5000, blank = True)
 

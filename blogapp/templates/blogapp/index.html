@@ -51,12 +51,12 @@
                     </div>
                     <p class="lead mb-5">{{settings.about}}</p>
                     <div class="social-icons">
-                        <a class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="#"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="social-icon" href="#"><i class="fab fa-instagram"></i></a>
-                        <a class="social-icon" href="#"><i class="fab fa-spotify"></i></a>
-                        <a class="social-icon" href="#"><i class="fab fa-telegram"></i></a>
+                        <a class="social-icon" href="{{settings.linkedin}}"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="{{settings.github}}"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="{{settings.twitter}}"><i class="fab fa-twitter"></i></a>
+                        <a class="social-icon" href="{{settings.instagram}}"><i class="fab fa-instagram"></i></a>
+                        <a class="social-icon" href="{{settings.spotify}}"><i class="fab fa-spotify"></i></a>
+                        <a class="social-icon" href="{{settings.telegram}}"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
             </section>
@@ -94,7 +94,6 @@
                             <div class="subheading mb-3">{{edu.memo}}</div>
                             <p><a href="{{edu.link.url}}"> Link </a></p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div>
                     </div>
                     {% endfor %}
 
@@ -108,7 +107,7 @@
                     <div class="subheading mb-3">Programming Languages & Tools</div>
                     <ul class="list-inline dev-icons">
                             {% for sk in skills_tools %}
-                            <li class="list-inline-item"><i class="{{sk.Class}}"></i></li>
+                                <li class="list-inline-item"><i class="{{sk.Class}}"></i> {{sk.title}}</li>
                             {% endfor %}
                     </ul>
                     <div class="subheading mb-3">Workflow</div>
