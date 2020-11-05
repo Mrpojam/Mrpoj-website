@@ -2,8 +2,10 @@ from django.db import models
 
 class Settings (models.Model):
     name = models.CharField (max_length = 50, blank = True)
+    family = models.CharField (max_length = 50, blank = True)
     pic = models.ImageField (upload_to = 'images')
     about = models.TextField(max_length = 4000, blank = True)
+    one_line = models.TextField(max_length = 100, blank = True)
     email = models.EmailField (blank = True)
     twitter = models.URLField(blank = True)
     instagram = models.URLField(blank = True)
@@ -11,7 +13,7 @@ class Settings (models.Model):
     spotify = models.URLField(blank = True)
     guthub = models.URLField(blank = True)
     linkedin = models.URLField(blank = True)
-
+    interests = models.TextField(max_length = 5000, blank = True)
 
 class Experince (models.Model):
     title = models.CharField(max_length = 100)
@@ -26,8 +28,7 @@ class Education (models.Model):
     link = models.URLField(blank = True)
 
 class Skills_tools (models.Model):
-    title = models.CharField(max_length = 40)
-    thumbnail = models.ImageField(upload_to = 'images')
+    Class = models.CharField(max_length = 100, blank = True)
 
 class Skills (models.Model):
     memo = models.TextField(max_length = 500)
