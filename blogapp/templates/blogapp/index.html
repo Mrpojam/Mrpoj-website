@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>{{ settings.name }}</title>
+        <title>{{ settings.name }} {{ settings.family }}</title>
         <link rel="icon" type="image/x-icon" href="{% static '/blogapp/assets/img/favicon.ico'%}" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
@@ -50,7 +50,7 @@
                             {{settings.one_line}}
                         <a href="mailto:{{settings.email}}">{{settings.email}}</a>
                     </div>
-                    <p class="lead mb-5">{{settings.about}}</p>
+                    <p class="lead mb-5">{{settings.about | linebreaks }}</p>
                     <div class="social-icons">
                         <a class="social-icon" href="{{settings.linkedin}}"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="{{settings.github}}"><i class="fab fa-github"></i></a>
@@ -67,7 +67,7 @@
             {% if experinces %}
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Experience</h2>
+                    <h2 class="mb-5">Experiences and Important skills</h2>
                     {% for ex in experinces %}
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
@@ -111,12 +111,7 @@
                                 <li class="list-inline-item"><img src = "{{sk.thumbnail.url}}" width = 50></li>
                             {% endfor %}
                     </ul>
-                    <div class="subheading mb-3">Workflow</div>
                     <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Mobile-First, Responsive Design
-                        </li>
                         {% for sk in skills %}
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>

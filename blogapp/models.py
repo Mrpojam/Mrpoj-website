@@ -27,6 +27,9 @@ class Experince (models.Model):
     def __str__ (self):
         return self.title
 
+    class Meta:
+        ordering = ['-date']
+
 class Education (models.Model):
     instutation = models.CharField(max_length = 100)
     degree = models.CharField(max_length = 100)
@@ -38,11 +41,12 @@ class Education (models.Model):
 
 
 class Tools (models.Model):
-    titile = models.CharField(max_length = 10)
+    title = models.CharField(max_length = 10)
     thumbnail = models.ImageField(upload_to = 'images')
+    def __str__(self):
+        return self.title
 class Skills (models.Model):
     memo = models.TextField(max_length = 500)
-
     def __str__ (self):
         return self.memo
 
